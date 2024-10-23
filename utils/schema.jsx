@@ -5,7 +5,7 @@ export const MockInterview = pgTable('mockInterview', {
     jsonMockResp: text('jsonMockResp').notNull(),
     jobPosition: text('jobPosition').notNull(),
     jobDesc: text('jobDesc').notNull(),
-    jobExperiance: text('jobExperiance').notNull(),
+    jobExperience: text('jobExperience').notNull(),
     createdBy: varchar('createdBy').notNull(),
     createdAt: varchar('createdAt'),
     mockId: varchar('mockId').notNull()
