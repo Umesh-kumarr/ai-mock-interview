@@ -1,6 +1,9 @@
 'use client'
+
+import { SignUp } from '@clerk/nextjs'
+
 import * as Clerk from '@clerk/elements/common'
-import * as SignUp from '@clerk/elements/sign-up'
+// import * as SignUp from '@clerk/elements/sign-up'
 import Link from 'next/link'
 import { Button } from '/components/ui/button'
 import {
@@ -90,7 +93,7 @@ export default function SignUpPage() {
           </p>
         </div>
 
-    <div className="grid w-full grow items-center px-4 sm:justify-center">
+    {/* <div className="grid w-full grow items-center px-4 sm:justify-center">
       <SignUp.Root>
         <Clerk.Loading>
           {(isGlobalLoading) => (
@@ -314,9 +317,9 @@ export default function SignUpPage() {
           )}
         </Clerk.Loading>
       </SignUp.Root>
-    </div>
+    </div> */}
 
-    
+<SignUp />
     </div>
     </main>
   </div>

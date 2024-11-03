@@ -1,7 +1,9 @@
-
 'use client'
+
+import { SignIn } from '@clerk/nextjs'
+
 import * as Clerk from '@clerk/elements/common'
-import * as SignIn from '@clerk/elements/sign-in'
+// import * as SignIn from '@clerk/elements/sign-in'
 import Link from 'next/link'
 import { Button } from '/components/ui/button'
 import {
@@ -16,6 +18,7 @@ import { Input } from '/components/ui/input'
 import { Label } from '/components/ui/label'
 import { Icons } from '/components/ui/icons'
 import { cn } from '/lib/utils'
+
 
 export default function SignInPage() {
   return (
@@ -90,7 +93,7 @@ export default function SignInPage() {
         </div>
 
         
-    <div className="grid w-full grow items-center px-4 sm:justify-center">
+    {/* <div className="grid w-full grow items-center px-4 sm:justify-center">
       <SignIn.Root>
         <Clerk.Loading>
           {(isGlobalLoading) => (
@@ -351,8 +354,8 @@ export default function SignInPage() {
           )}
         </Clerk.Loading>
       </SignIn.Root>
-    </div>
-
+    </div> */}
+<SignIn />
 
       </div>
     </main>
