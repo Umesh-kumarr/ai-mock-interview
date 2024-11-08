@@ -6,11 +6,12 @@ import { Lightbulb, WebcamIcon } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import Webcam from "react-webcam";
 import { Button } from '../../../../components/ui/button';
+import Link from 'next/link';
 
 
 function Interview ({params}) {
     
-    const [interviewData,setInterviewData] = useState();
+    const [interviewData,setInterviewData] = useState(true);
     const [webCamEnabled,setWebCamEnabled]=useState(false);
 
     useEffect(()=>{
@@ -18,14 +19,14 @@ function Interview ({params}) {
         GetInterviewDetails();
     },[])
 
+
     const GetInterviewDetails = async()=>{
-        const result=await db.select().from(MockInterview)
-        .where(eq(MockInterview.mockId,params.interviewId))
-
-
-        
+      const result=await db.select().from(MockInterview)
+      .where(eq(MockInterview.mockId,params.interviewId));
+    
         setInterviewData(result[0]);
     }
+
   return (
     <div className='my-10 '>
       <h2 className='font-bold text-2xl'>Let's Get Started</h2>
@@ -34,11 +35,13 @@ function Interview ({params}) {
       
 
       <div className='flex flex-col my-5 gap-5 p-5 rounded-lg border'>
+        
       <div className='flex flex-col p-5 gap-5 rounded-lg border'>
-      <h2 className='text-lg'><strong>Job Role/Job Position : </strong>{interviewData.jobPosition}</h2>
+        <h2 className='text-lg'><strong>Job Role/Job Position : </strong>{interviewData.jobPosition}</h2>
         <h2 className='text-lg'><strong>Job Description/Tech Stack : </strong>{interviewData.jobDesc}</h2>
         <h2 className='text-lg'><strong>Years of Experiance : </strong>{interviewData.jobExperience}</h2>
-        </div>
+      </div>
+
         <div className='p-5 border rounded-lg border-yellow-300 bg-yellow-100'>
           <h2 className='flex gap-2 items-center text-yellow-500'><Lightbulb/><strong>Information</strong></h2>
           <h2 className='mt-5 text-yellow-400'>{process.env.NEXT_PUBLIC_INFORMATION}
@@ -67,7 +70,10 @@ function Interview ({params}) {
 
 
       <div className='flex justify-end items-end'>
-      <Button className="">Start Interview</Button>
+        
+        <Link href={'/dashboard/interview/'+params.interviewId+'/start'}>
+        <Button className="">Start Interview</Button>
+        </Link>
       </div>
       
 
