@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { db } from '/utils/db';
 import { MockInterview } from '/utils/schema';
 import { eq } from 'drizzle-orm';
-import QusetionsSection from './_components/QusetionsSection';
+import QuestionsSection from './_components/QuestionsSection';
 
 
 function StartInterview({params}) {
@@ -32,7 +32,7 @@ function StartInterview({params}) {
     <div>
       <div className='grid grid-cols-1 md:grid-cols-2'>
         {/* {Questions} */}
-        <QusetionsSection mockInterviewQuestion={mockInterviewQuestion}/>
+        <QuestionsSection mockInterviewQuestion={mockInterviewQuestion}/>
 
       {/* Video/ Audio Recording */}
 
