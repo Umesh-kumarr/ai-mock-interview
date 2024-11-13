@@ -81,4 +81,4 @@ function Interview ({params}) {
   )
 }
 
-export default Interview
+export default Interview 

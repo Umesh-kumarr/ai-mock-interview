@@ -10,7 +10,7 @@ function StartInterview({params}) {
 
   const [interviewData,setInterviewData]=useState();
   const [mockInterviewQuestion,setMockInterviewQuestion]=useState();
-  const [activeQuestionIndex,setActiveQuestionIndex] = useState(3);
+  const [activeQuestionIndex,setActiveQuestionIndex] = useState(0);
 
 
   useEffect(()=>{
