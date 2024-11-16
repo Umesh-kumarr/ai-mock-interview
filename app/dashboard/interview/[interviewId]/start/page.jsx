@@ -4,6 +4,8 @@ import { db } from '/utils/db';
 import { MockInterview } from '/utils/schema';
 import { eq } from 'drizzle-orm';
 import QuestionsSection from './_components/QuestionsSection';
+import RecordAnswerSection from './_components/RecordAnswerSection';
+
 
 
 function StartInterview({params}) {
@@ -39,6 +41,7 @@ function StartInterview({params}) {
         />
 
       {/* Video/ Audio Recording */}
+      <RecordAnswerSection/>
 
       </div>
     </div>
