@@ -5,7 +5,7 @@ import { eq } from 'drizzle-orm';
 import { Lightbulb, WebcamIcon } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import Webcam from "react-webcam";
-import { Button } from '../../../../components/ui/button';
+import { Button } from '/components/ui/button';
 import Link from 'next/link';
 
 
