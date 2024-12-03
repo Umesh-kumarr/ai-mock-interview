@@ -16,7 +16,10 @@ function Header() {
 
   return (
     <div className='flex p-4 items-centre justify-between bg-secondary shadow-sm'>
-      <Image src={'/logo.svg'} width={160} height={100} alt='logo'/>
+      <div className="flex items-center gap-2">
+      <Image src={'/l.svg'} width={40} height={10} alt='logo'/>
+      <h2 className='text-3xl  font-sans font-bold'>MOCKMATE</h2>
+      </div >
       <ul className='hidden md:flex gap-6 m-2'>
         <li className={`hover:text-primary hover:font-bold transition-all cursor-pointer
             ${path=='/dashboard'&&'text-primary font-bold'}`}>Dashboard
