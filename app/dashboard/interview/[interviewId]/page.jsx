@@ -44,7 +44,8 @@ function Interview ({params}) {
 
         <div className='p-5 border rounded-lg border-yellow-300 bg-yellow-100'>
           <h2 className='flex gap-2 items-center text-yellow-500'><Lightbulb/><strong>Information</strong></h2>
-          <h2 className='mt-5 text-yellow-400'>{process.env.NEXT_PUBLIC_INFORMATION}</h2>
+          <h2 className='mt-5 text-yellow-400'>{process.env.NEXT_PUBLIC_INFORMATION}
+          </h2>
         </div>
       </div>
 

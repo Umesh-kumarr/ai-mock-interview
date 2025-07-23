@@ -20,11 +20,11 @@ function Hero() {
       <section className="z-50">
         <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
           <h1 className="xl:mt-36 lg:mt-28 md:mt-24 sm:mt-20 mt-16 mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-            Your Personalised Interview Coach
+            Your Personal AI Interview Coach
           </h1>
           <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
-            Double your chances of job offer with our AI-powered
-            interview preprator
+            Double your chances of landing that job offer with our AI-powered
+            interview prep
           </p>
           <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
             <a
@@ -65,23 +65,23 @@ function Hero() {
       <section className="py-8 bg-white z-50 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
         <h2 className="font-bold text-3xl">How it Works?</h2>
         <h2 className="text-md text-gray-500">
-          Give interviews in just 3 simple steps
+          Give mock interviews in just 3 simple steps
         </h2>
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <Card
             icon="lucide-atom"
             title="Write prompt for your form"
-            description=""
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium."
           />
           <Card
             icon="lucide-square-pen"
             title="Edit Your Form"
-            description=""
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium."
           />
           <Card
             icon="lucide-share2"
             title="Share & Start Accepting Responses"
-            description=""
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium."
           />
         </div>
         <div className="mt-12 text-center">
