@@ -1,6 +1,8 @@
 'use client'
 
-import { SignIn } from '@clerk/nextjs'
+import { SignIn, useUser } from '@clerk/nextjs'
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 
 import * as Clerk from '@clerk/elements/common'
 // import * as SignIn from '@clerk/elements/sign-in'
@@ -21,6 +23,17 @@ import { cn } from '/lib/utils'
 
 
 export default function SignInPage() {
+  const { isSignedIn } = useUser();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (isSignedIn) {
+      router.replace('/dashboard');
+    }
+  }, [isSignedIn, router]);
+
+  if (isSignedIn) return null;
+
   return (
     
 <section className="bg-white">

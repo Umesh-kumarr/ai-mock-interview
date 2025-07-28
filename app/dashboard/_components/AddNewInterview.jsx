@@ -87,35 +87,36 @@ function AddNewInterview() {
           <DialogHeader>
             <DialogTitle className="text-2xl">Tell us more  about Job you are interviewing</DialogTitle>
             <DialogDescription>
-            <form onSubmit={onSubmit}>
-              <div>
-                <h2>Add Details about your job position/role, job description and years of experiance</h2>
-                <div className="mt-7 my-3">
+              <form onSubmit={onSubmit}>
+                <div>
+                  {/* Replace <h2> inside <p> with <div> or <span> */}
+                  <div>Add Details about your job position/role, job description and years of experiance</div>
+                  <div className="mt-7 my-3">
                     <label>Job Role/Job Position</label>
                     <Input placeholder="Ex. Full Stack Developer" required
                     onChange={(event)=>setJobPosition(event.target.value)}/>
-                </div>
-                <div className="my-3">
+                  </div>
+                  <div className="my-3">
                     <label>Job Description/Tech Stack (In Short)</label>
                     <Textarea placeholder="Ex. React, NodeJs, MySql, Java" required
                     onChange={(event)=>setJobDesc(event.target.value)}/>
-                </div>
-                <div className="my-3">
+                  </div>
+                  <div className="my-3">
                     <label>No of Year Experince</label>
                     <Input placeholder="Ex.5" type="number" max="50" required
                     onChange={(event)=>setJobExperience(event.target.value)}/>
+                  </div>
                 </div>
-              </div>
-              <div className="flex gap-5 justify-end">
-                <Button type="button" variant="ghost" onClick={()=>setOpenDialog(false)}>Cancel</Button>
-                <Button type="submit" disabled={loading}>
-                  {loading?
-                  <>
-                  <LoaderCircle className="animate-spin"/>Generating from AI</>:'Start Interview'
-                }
-                  </Button>
-              </div>
-              </form>
+                <div className="flex gap-5 justify-end">
+                  <Button type="button" variant="ghost" onClick={()=>setOpenDialog(false)}>Cancel</Button>
+                  <Button type="submit" disabled={loading}>
+                    {loading?
+                    <>
+                    <LoaderCircle className="animate-spin"/>Generating from AI</>:'Start Interview'
+                  }
+                    </Button>
+                </div>
+                </form>
             </DialogDescription>
           </DialogHeader>
         </DialogContent>

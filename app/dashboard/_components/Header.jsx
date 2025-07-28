@@ -8,10 +8,10 @@ import React, { useEffect } from 'react'
 function Header() {
 
 
-    const path=usePathname();
-    useEffect(()=>{
-        console.log(path)
-    },{})
+    const path = usePathname();
+    useEffect(() => {
+        console.log(path);
+    }, [path]);
 
 
   return (

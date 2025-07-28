@@ -1,6 +1,8 @@
 'use client'
 
-import { SignUp } from '@clerk/nextjs'
+import { SignUp, useUser } from '@clerk/nextjs'
+import { useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 
 import * as Clerk from '@clerk/elements/common'
 // import * as SignUp from '@clerk/elements/sign-up'
@@ -20,6 +22,17 @@ import { Icons } from '/components/ui/icons'
 import { cn } from '/lib/utils'
 
 export default function SignUpPage() {
+  const { isSignedIn } = useUser();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (isSignedIn) {
+      router.replace('/dashboard');
+    }
+  }, [isSignedIn, router]);
+
+  if (isSignedIn) return null;
+
   return (
 
 
